@@ -11,7 +11,7 @@ const Link = ({ page, selectedPage, setSelectedPage }: Props) => {
   const pageTranslations: Record<SelectedPage, string> = {
     [SelectedPage.Home]: "Главная",
     [SelectedPage.Benefits]: "Наши услуги",
-    [SelectedPage.OurClasses]: "Этапы работы",
+    [SelectedPage.OurClasses]: "Реализация",
     [SelectedPage.ContactUs]: "Контакты",
   };
 
@@ -19,7 +19,7 @@ const Link = ({ page, selectedPage, setSelectedPage }: Props) => {
     <AnchorLink
       href={`#${page}`}
       onClick={() => setSelectedPage(page)}
-      className={`${selectedPage === page ? "text-primary-500" : ""} transition duration-500 hover:text-primary-300`}
+      className={`${selectedPage === page ? "text-primary-500" : ""} transition duration-500 hover:text-secondary-500`}
     >
       {pageTranslations[page]}
     </AnchorLink>

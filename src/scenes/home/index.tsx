@@ -1,8 +1,7 @@
 import { SelectedPage } from "@/shared/types";
 import ActionButton from "@/shared/ActionButton";
-import HomePageText from "@/assets/HomePageLogo.png";
-import HomePageTextDark from "@/assets/HomePageTextDark.png";
-import HomePageGraphic from "@/assets/HomePageGraphic.png";
+import HomePageText from "@/assets/HomePageLogo.webp";
+import HomePageGraphic from "@/assets/HomePageGraphic.webp";
 import { motion } from "framer-motion";
 
 type Props = {
@@ -40,12 +39,6 @@ const Home = ({ setSelectedPage }: Props) => {
                 <img
                   src={HomePageText}
                   alt="logo"
-                  className="block dark:hidden"
-                />
-                <img
-                  src={HomePageTextDark}
-                  alt="logo"
-                  className="hidden dark:block"
                 />
               </div>
             </div>

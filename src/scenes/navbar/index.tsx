@@ -1,11 +1,9 @@
 import { useEffect, useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
-import Logo from "@/assets/Logo.png";
-import LogoDark from "@/assets/LogoDark.png";
+import Logo from "@/assets/Logo.webp";
 import Link from "@/scenes/navbar/Link";
 import { SelectedPage } from "@/shared/types";
 import useMediaQuery from "@/hooks/useMediaQuery";
-import Modal from "@/modal";
 import ThemeToggle from "@/shared/ThemeToggle";
 
 type Props = {
@@ -16,7 +14,6 @@ type Props = {
 
 const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
   const flexBetween = "flex items-center justify-between";
-  const [isModalOpen, setIsModalOpen] = useState(false);
   // касотмный хук для отслеживания изменений ширины окна
   const isAboveMediumScreens = useMediaQuery("(min-width: 1100px)");
 
@@ -53,8 +50,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
           <div className={`${flexBetween} w-full gap-16`}>
             {/* Левая часть меню */}
 
-            <img src={Logo} alt="logo" className="block dark:hidden" />
-            <img src={LogoDark} alt="logo" className="hidden dark:block" />
+            <img src={Logo} alt="logo" />
 
             {/* Правая часть меню*/}
             {isAboveMediumScreens ? (
@@ -82,7 +78,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
                   />
                 </div>
                 <a
-                  className="text-sm font-bold text-primary-500 underline hover:text-secondary-500"
+                  className="text-sm font-bold text-primary-500 underline hover:text-secondary-500 dark:text-secondary-500 dark:hover:text-primary-500"
                   href="tel:+79618887889"
                 >
                   <p className="text-lg">+7(961)888-78-89</p>
@@ -104,24 +100,6 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
           </div>
         </div>
       </div>
-
-      <Modal open={isModalOpen} onClose={() => setIsModalOpen(false)}>
-        <div className="gap-8 bg-primary-300 p-10 text-center">
-          <h2 className="mb-5 text-gray-500">Hi, friend!</h2>
-          <p className="mb-5 text-gray-500">
-            It's just a single page application. Sponsor me. I want to get a
-            job. tg: @alexequinox
-          </p>
-          <button
-            className="rounded-xl bg-secondary-500 px-2 py-3 text-center text-gray-500 hover:bg-primary-500"
-            onClick={() => {
-              setIsModalOpen(false);
-            }}
-          >
-            Close
-          </button>
-        </div>
-      </Modal>
 
       {/* Мобильное меню  */}
 
@@ -168,12 +146,12 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
           </div>
           <div className="ml-[33%] pt-7">
             <a
-              className="text-sm font-bold text-primary-500 underline hover:text-secondary-500"
+              className="text-sm font-bold text-primary-500 underline hover:text-secondary-500 dark:text-secondary-500 dark:hover:text-primary-500"
               href="tel:+79618887889"
             >
               <p className="text-lg">+7(961)888-78-89</p>
             </a>
-            <ThemeToggle />
+            <div className="pt-7"><ThemeToggle/></div>
           </div>
         </div>
       )}
