@@ -3,8 +3,6 @@ import { motion } from "framer-motion";
 import HText from "@/shared/HText";
 import { useRef } from "react";
 import Slider from "react-slick";
-
-// Импорты изображений
 import Image1 from "@/assets/Image2.webp";
 import Image2 from "@/assets/Image1.webp";
 import Image3 from "@/assets/Image3.webp";
@@ -23,7 +21,6 @@ import Image15 from "@/assets/Image15.webp";
 import Image16 from "@/assets/Image16.webp";
 import Image17 from "@/assets/Image17.webp";
 import Image18 from "@/assets/Image18.webp";
-
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -110,11 +107,11 @@ const OurClasses = ({ setSelectedPage }: Props) => {
         >
           <div className="md:w-3/5">
             <HText>Реализация</HText>
-            <p className="py-5 text-lg text-gray-700 dark:text-gray-300">
+            <p className="py-5 ">
               Мы предлагаем полный цикл услуг по отделке и подготовке помещений.
               Наши работы включают в себя:
             </p>
-            <ul className="list-disc pl-6 text-lg text-gray-700 dark:text-gray-300">
+            <ul className="list-disc pl-6  ">
               <li>Заключение сметы с детализацией всех этапов работ.</li>
               <li>Подписание договора с фиксацией сроков и обязательств.</li>
               <li>Гарантия на выполненные работы.</li>
@@ -123,7 +120,7 @@ const OurClasses = ({ setSelectedPage }: Props) => {
               </li>
               <li>Соблюдение всех строительных норм и стандартов.</li>
             </ul>
-            <p className="pt-5 text-lg text-gray-700 dark:text-gray-300">
+            <p className="pt-5  ">
               Мы гарантируем качественное выполнение работ в оговоренные сроки и
               предоставляем полный пакет документов по завершению проекта.
             </p>

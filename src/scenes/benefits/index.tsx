@@ -12,7 +12,7 @@ import Electric from "@/assets/electric.png";
 
 const benefits: Array<BenefitType> = [
   {
-    icon: <img src={Ozon} alt="Ozon Icon" className="h-20 w-20 " />,
+    icon: <img src={Ozon} alt="Ozon Icon" className="h-20 w-20" />,
     title: "Отделка под Ozon",
     description:
       "Подготовим помещение для аренды на платформе Ozon, обеспечив высокую доходность и максимальную эффективность.",
@@ -166,7 +166,7 @@ const Benefits = ({ setSelectedPage }: Props) => {
               </div>
 
               <div className="relative mt-16">
-                <div className="before:absolute before:-bottom-20 before:-top-[80px] before:right-10 before:z-[-1]  before:content-sparkles xs:before:right-10 sm:before:right-40">
+                <div className="before:absolute before:-bottom-20 before:-top-[80px] before:right-10 before:z-[-1] before:content-sparkles xs:before:right-10 sm:before:right-40">
                   <ActionButton setSelectedPage={setSelectedPage}>
                     Ждем Ваших звонков!
                   </ActionButton>
