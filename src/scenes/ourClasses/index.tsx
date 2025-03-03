@@ -21,6 +21,16 @@ import Image15 from "@/assets/Image15.webp";
 import Image16 from "@/assets/Image16.webp";
 import Image17 from "@/assets/Image17.webp";
 import Image18 from "@/assets/Image18.webp";
+import Image19 from "@/assets/Image19.webp";
+import Image20 from "@/assets/Image20.webp";
+import Image21 from "@/assets/Image21.webp";
+import Image22 from "@/assets/Image22.webp";
+import Image23 from "@/assets/Image23.webp";
+import Image24 from "@/assets/Image24.webp";
+import Image25 from "@/assets/Image25.webp";
+import Image26 from "@/assets/Image26.webp";
+import Image27 from "@/assets/Image27.webp";
+
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -37,6 +47,9 @@ const OurClasses = ({ setSelectedPage }: Props) => {
     [Image9, Image10, Image11],
     [Image12, Image13, Image14, Image15],
     [Image16, Image17, Image18],
+    [Image19, Image20, Image21],
+    [Image22, Image23, Image24],
+    [Image25, Image26, Image27],
   ];
 
   const renderClassItem = (
@@ -107,11 +120,11 @@ const OurClasses = ({ setSelectedPage }: Props) => {
         >
           <div className="md:w-3/5">
             <HText>Реализация</HText>
-            <p className="py-5 ">
+            <p className="py-5">
               Мы предлагаем полный цикл услуг по отделке и подготовке помещений.
               Наши работы включают в себя:
             </p>
-            <ul className="list-disc pl-6  ">
+            <ul className="list-disc pl-6">
               <li>Заключение сметы с детализацией всех этапов работ.</li>
               <li>Подписание договора с фиксацией сроков и обязательств.</li>
               <li>Гарантия на выполненные работы.</li>
@@ -120,7 +133,7 @@ const OurClasses = ({ setSelectedPage }: Props) => {
               </li>
               <li>Соблюдение всех строительных норм и стандартов.</li>
             </ul>
-            <p className="pt-5  ">
+            <p className="pt-5">
               Мы гарантируем качественное выполнение работ в оговоренные сроки и
               предоставляем полный пакет документов по завершению проекта.
             </p>
@@ -153,6 +166,21 @@ const OurClasses = ({ setSelectedPage }: Props) => {
               "Электромонтажные работы",
               "Полный спектр электромонтажных работ.",
               imagePairs[4],
+            )}
+            {renderClassItem(
+              "Сантехнические работы",
+              "Профессиональные сантехнические работы: установка и ремонт.",
+              imagePairs[5],
+            )}
+            {renderClassItem(
+              "Фасадные работы",
+              "Отделка фасадов любой сложности.",
+              imagePairs[6],
+            )}
+            {renderClassItem(
+              "Демонтажные работы",
+              "Полный спектр демонтажных работ для любых объектов.",
+              imagePairs[7],
             )}
           </div>
         </div>

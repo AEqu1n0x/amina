@@ -9,6 +9,9 @@ import WB from "@/assets/wb.webp";
 import Office from "@/assets/office.webp";
 import Home from "@/assets/home.webp";
 import Electric from "@/assets/electric.png";
+import Santechnic from "@/assets/Santechnic.webp";
+import Fasad from "@/assets/fasad.webp";
+import Dempntazh from "@/assets/Demontazh.webp";
 
 const benefits: Array<BenefitType> = [
   {
@@ -43,6 +46,8 @@ const benefits: Array<BenefitType> = [
     style:
       "border-yellow-500 bg-yellow-100 dark:border-[#FFC447] dark:bg-[#5A3A00]",
   },
+];
+const benefits2: Array<BenefitType> = [
   {
     icon: <img src={Electric} alt="Electrician Icon" className="h-20 w-20" />,
     title: "Электромонтажные работы",
@@ -50,6 +55,29 @@ const benefits: Array<BenefitType> = [
       "Выполним полный спектр электромонтажных работ — от разводки проводки до установки розеток, светильников и автоматов.",
     style:
       "border-orange-500 bg-orange-100 dark:border-[#FF8880] dark:bg-[#5A1A1A]",
+  },
+  {
+    icon: <img src={Santechnic} alt="Santechnic Icon" className="h-20 w-20" />,
+    title: "Сантехнические работы",
+    description:
+      "Профессиональный монтаж, ремонт и обслуживание сантехники любой сложности.",
+    style:
+      "border-blue-600 bg-blue-100 dark:border-[#4A90E2] dark:bg-[#1A3A5F]",
+  },
+  {
+    icon: <img src={Fasad} alt="Fasad Icon" className="h-20 w-20" />,
+    title: "Фасадные работы",
+    description:
+      "Качественная отделка фасадов с использованием современных материалов, защита и утепление зданий.",
+    style:
+      "border-gray-500 bg-gray-100 dark:border-[#A0A0A0] dark:bg-[#2E2E2E]",
+  },
+  {
+    icon: <img src={Dempntazh} alt="Demolition Icon" className="h-20 w-20" />,
+    title: "Демонтажные работы",
+    description:
+      "Профессиональный демонтаж зданий, стен и конструкций с соблюдением всех норм безопасности.",
+    style: "border-red-500 bg-red-100 dark:border-[#FF6666] dark:bg-[#5A1A1A]",
   },
 ];
 
@@ -110,7 +138,25 @@ const Benefits = ({ setSelectedPage }: Props) => {
               />
             ))}
           </motion.div>
-          {/* Картинка и описание*/}
+
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={container}
+            className="mt-5 items-center justify-between gap-8 md:flex"
+          >
+            {benefits2.map((benefit: BenefitType) => (
+              <Benefit
+                key={benefit.title}
+                icon={benefit.icon}
+                title={benefit.title}
+                description={benefit.description}
+                style={benefit.style}
+              />
+            ))}
+          </motion.div>
+
           <div className="mt-16 items-center justify-between gap-20 md:mt-28 md:flex">
             <img
               className="mx-auto"

@@ -54,7 +54,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
                 Телефон:
               </div>
               <a
-                className="font-bold text-primary-500 underline hover:text-secondary-500 dark:text-secondary-500 dark:hover:text-primary-500 "
+                className="font-bold text-primary-500 underline hover:text-secondary-500 dark:text-secondary-500 dark:hover:text-primary-500"
                 href="tel:+79618887889"
               >
                 <p className="text-[18px] sm:text-[24px] md:text-[36px]">
@@ -66,7 +66,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
                 Почта:
               </div>
               <p className="text-[18px] font-semibold text-primary-500 dark:text-secondary-500 sm:text-[24px] md:text-[36px]">
-                Vusal.vusal.89@mail.ru
+                trsk.amina_groop@mail.ru
               </p>
             </motion.div>
 

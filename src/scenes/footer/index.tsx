@@ -19,7 +19,7 @@ const Footer = () => {
           <p className="my-5">
             Свяжитесь с нами для получения дополнительной информации.
           </p>
-          <p className="my-5 font-bold">Vusal.vusal.89@mail.ru</p>
+          <p className="my-5 font-bold">trsk.amina_groop@mail.ru</p>
           <a
             className="text-sm font-bold "
             href="tel:+79618887889"
